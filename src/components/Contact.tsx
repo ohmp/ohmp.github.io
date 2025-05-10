@@ -14,9 +14,10 @@ const Contact = () => {
   const [error, setError] = useState<string|null>(null);
 
   // TODO: Replace with your actual EmailJS IDs
-  const EMAILJS_SERVICE_ID = 'service_sl8ud68';
-  const EMAILJS_TEMPLATE_ID = 'template_2i6a1qa';
-  const EMAILJS_USER_ID = 'bH_p0Dqzo_bklo6Np';
+  // EmailJS public environment variables (exposed in frontend bundle)
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
