@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
  // base: process.env.NODE_ENV === 'production' ? '/ohmp.github.io/' : '/',
-  //base: '/ohmp.github.io/',
+  base: '/ohmp.github.io/',
   plugins: [
     react(),
     mode === 'development' &&
