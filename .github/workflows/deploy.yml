@@ -48,6 +48,4 @@ jobs:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_branch: main
           force_orphan: true
-          base: '/ohmp.github.io/'
-          publish_dir: ./dist
 
