@@ -35,6 +35,11 @@ jobs:
         with:
           node-version: lts/*
           cache: 'npm'
+      - name: Create .env file from GitHub secrets
+        run: |
+          echo "VITE_EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
+          echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
+          echo "VITE_EMAILJS_USER_ID=${{ secrets.EMAILJS_USER_ID }}" >> .env
       - name: Install dependencies
         run: npm ci
       - name: Build
