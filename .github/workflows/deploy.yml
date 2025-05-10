@@ -46,44 +46,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_branch: main
+          force_orphan: true
+          base: '/ohmp.github.io/'
           publish_dir: ./dist
 
-
-
-
-
-
-
-# name: Deploy to GitHub Pages
-
-# on:
-#   push:
-#     branches:
-#       - source
-
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v4
-
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: 20
-
-#       - name: Install dependencies
-#         run: npm ci
-
-#       - name: Build project
-#         run: npm run build
-
-#       - name: Deploy to GitHub Pages (main branch root)
-#         uses: peaceiris/actions-gh-pages@v4
-#         with:
-#           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-#           publish_dir: ./dist
-#           publish_branch: main
-#           force_orphan: true
