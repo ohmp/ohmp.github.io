@@ -15,7 +15,7 @@ const Contact = () => {
 
   // TODO: Replace with your actual EmailJS IDs
   const EMAILJS_SERVICE_ID = 'service_sl8ud68';
-  const EMAILJS_TEMPLATE_ID = 'template_sl8ud68';
+  const EMAILJS_TEMPLATE_ID = 'template_fgz915l';
   const EMAILJS_USER_ID = 'bH_p0Dqzo_bklo6Np';
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
