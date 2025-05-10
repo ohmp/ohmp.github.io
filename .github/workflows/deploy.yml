@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - source
+      - main
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/source'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Download artifact
@@ -46,6 +46,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_branch: main
-          force_orphan: true
+          publish_dir: ./dist
 
